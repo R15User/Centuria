@@ -2,6 +2,8 @@ package org.asf.centuria.data;
 
 import java.util.ArrayList;
 import java.util.Base64;
+import org.asf.centuria.entities.generic.Quaternion;
+import org.asf.centuria.entities.generic.Vector3;
 
 public class XtWriter {
 
@@ -49,17 +51,17 @@ public class XtWriter {
 		add(Double.toString(num));
 	}
 
-	public void writeVec3(double x,double y,double z) {
-		add(Double.toString(x));
-		add(Double.toString(y));
-		add(Double.toString(z));
+	public void writeVec3(Vector3 vec) {
+		add(Double.toString(vec.x));
+		add(Double.toString(vec.y));
+		add(Double.toString(vec.z));
 	}
 
-	public void writeVec4(double x,double y,double z,double w) {
-		add(Double.toString(x));
-		add(Double.toString(y));
-		add(Double.toString(z));
-		add(Double.toString(w));
+	public void writeQuat(Quaternion q) {
+		add(Double.toString(q.x));
+		add(Double.toString(q.y));
+		add(Double.toString(q.z));
+		add(Double.toString(q.w));
 	}
 
 	public void writeBoolean(boolean v) {
