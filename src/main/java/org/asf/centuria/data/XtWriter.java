@@ -49,6 +49,19 @@ public class XtWriter {
 		add(Double.toString(num));
 	}
 
+	public void writeVec3(double x,double y,double z) {
+		add(Double.toString(x));
+		add(Double.toString(y));
+		add(Double.toString(z));
+	}
+
+	public void writeVec4(double x,double y,double z,double w) {
+		add(Double.toString(x));
+		add(Double.toString(y));
+		add(Double.toString(z));
+		add(Double.toString(w));
+	}
+
 	public void writeBoolean(boolean v) {
 		add(Boolean.toString(v));
 	}
