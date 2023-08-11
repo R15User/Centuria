@@ -680,13 +680,8 @@ public class GameServer extends BaseSmartfoxServer {
 							// Object info
 							wr.writeInt(0);
 							wr.writeLong(System.currentTimeMillis() / 1000);
-							wr.writeDouble(ent.locationInfo.position.x);
-							wr.writeDouble(ent.locationInfo.position.y);
-							wr.writeDouble(ent.locationInfo.position.z);
-							wr.writeDouble(ent.locationInfo.rotation.x);
-							wr.writeDouble(ent.locationInfo.rotation.y);
-							wr.writeDouble(ent.locationInfo.rotation.z);
-							wr.writeDouble(ent.locationInfo.rotation.w);
+							wr.writeVec3(ent.locationInfo.position);
+							wr.writeQuat(ent.locationInfo.rotation);
 							wr.add("0%0%0%0.0%0%0%0");
 							wr.writeString(""); // data suffix
 
